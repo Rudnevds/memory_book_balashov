@@ -1,0 +1,32 @@
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color:red;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+.highlight {
+    background-color: yellow; /* Выделение найденных ячеек */
+}
+
+.white{
+    background-color: white;  
+}
+.search-input {
+    margin-left: auto;
+margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+}
