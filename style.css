@@ -1,20 +1,85 @@
 
-h1 {
-    text-align: center;
-    font-size: 50px;
-    color:red;
+*{
+    margin: 0;
+    padding: 0;
 }
+
+
+
+.search-input {
+    min-width: 400px;
+    max-width: 1800px; /* Максимальная ширина */
+    padding: 10px 15px; /* Внутренние отступы */
+    border: 2px solid #4CAF50; /* Зеленая граница */
+    border-radius: 25px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    background-color: #f9f9f9; /* Светлый фон */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход для эффектов */
+}
+
+/* Эффекты при наведении и фокусе */
+.search-input:focus {
+    outline: none; /* Убираем стандартное выделение */
+    border-color: #76c7c0; /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px rgba(118, 199, 192, 0.5); /* Тень при фокусе */
+}
+
+.search-input::placeholder {
+    color: #aaa; /* Цвет текста плейсхолдера */
+    opacity: 1; /* Полная непрозрачность */
+    font-style: italic; /* Курсив для плейсхолдера */
+}
+
+
+h1 {
+    padding: 0; /* Убираем верхний отступ */
+    margin: 0; /* Убираем отступы по умолчанию */
+    text-align: center;
+    font-size: 5vw; /* Используем относительную единицу для адаптивного размера шрифта */
+    color: rgb(255, 41, 41);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw; /* Увеличиваем размер шрифта для меньших экранов */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 10vw; /* Еще больше увеличиваем размер шрифта для мобильных устройств */
+    }
+}
+
+
+
 table {
     border-collapse: collapse;
     width: 100%;
+    background: beige;
 }
+
+
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #f8f0f0;
     padding: 8px;
 }
 th {
     background-color: #f2f2f2;
 }
+
+
+.pagination {
+    margin-top: 20px;
+}
+.pagination button {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 .highlight {
     background-color: yellow; /* Выделение найденных ячеек */
 }
@@ -23,10 +88,96 @@ th {
     background-color: white;  
 }
 .search-input {
-    margin-left: auto;
-margin-right: auto;
+    margin-left: 2%;
+margin-right: 2%;
     margin-bottom: 20px;
     padding: 10px;
     width: 100%;
     font-size: 16px;
+}
+
+/* .zaglav {
+    position: relative; 
+}
+
+.zaglav::before {
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 87%; 
+    height: 80%; 
+    transform: translate(-50%, -50%); 
+    background: inherit; 
+    filter: blur(10px); 
+    z-index: 0; 
+}
+
+
+h1 {
+    position: relative; 
+    z-index: 1; 
+    padding: 0; 
+    margin: 0; 
+    text-align: center;
+    font-size: 5vw; 
+    color: rgb(255, 41, 41);
+} */
+
+.zaglav {
+    background: url(./var4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+@media (min-width: 768px) {
+ .zaglav {
+    background-size: contain;
+ }
+    
+} 
+
+
+
+#data-table {
+    width: 80%; /* Занять всю ширину контейнера */
+    border-collapse: collapse; /* Убрать двойные границы между ячейками */
+    margin: 20px 10%; /* Отступ сверху и снизу */
+    font-family: Arial, sans-serif; /* Шрифт для таблицы */
+}
+
+/* Стили для заголовков таблицы */
+#data-table thead {
+    background-color: #4CAF50; /* Зеленый фон для заголовков */
+    color: black; /* Белый цвет текста */
+}
+
+#data-table th, 
+#data-table td {
+    padding: 12px; /* Отступ внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+    border: 1px solid #ddd; /* Светло-серая граница */
+}
+
+/* Стили для строк таблицы */
+#data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Светло-серый фон для четных строк */
+}
+
+#data-table tbody tr:hover {
+    background-color: #ddd; /* Цвет фона при наведении на строку */
+}
+
+/* Стили для пустых ячеек */
+#data-table td:empty {
+    background-color: #f9f9f9; /* Светлый фон для пустых ячеек */
+}
+
+/* Стили для ячеек с данными */
+#data-table td {
+    vertical-align: top; /* Выравнивание текста по верхнему краю ячейки */
 }
